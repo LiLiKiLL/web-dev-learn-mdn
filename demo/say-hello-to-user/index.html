@@ -22,18 +22,22 @@
     <script type="text/javascript">
       var myBtn = document.querySelector('button');
       var myHeading = document.querySelector('h1');
+      
       function setUserName() {
         var userName = prompt('Please enter your name.');
         localStorage.setItem('userName', userName);
         myHeading.innerHTML = 'Mozilla is cool, ' + userName;
       }
+
+      if (!localStorage.getItem('userName')) {
+        setUserName();
+      } else {
+        var storedName = localStorage.getItem('userName')
+        myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+      }
+
       myBtn.onclick = function () {
-        if (!localStorage.getItem('userName')) {
-          setUserName();
-        } else {
-          var storedName = localStorage.getItem('userName')
-          myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
-        }
+        setUserName();
       }
     </script>
   </body>
