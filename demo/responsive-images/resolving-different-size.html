@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="分辨率响应式图片">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>分辨率响应式图片-示例</title>
+</head>
+<body>
+<img srcset="./chenxu_320.jpg 320w,
+                ./chenxu_800.jpg 800w,
+                ./chenxu.jpg 1600w"
+        sizes="(max-width: 320px) 280px,
+                (max-width: 800px) 600px,
+                1600px"
+        src="./chenxu.jpg" alt="Chenxu at Mogan Mountain">
+
+
+</body>
+</html>
