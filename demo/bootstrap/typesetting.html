@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap 文字和排版</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 100px;
+        }
+        .top {
+            display: block;
+            position: fixed;
+            right: 30px;
+            bottom: 30px; 
+            width: 50px; 
+            height: 50px; 
+            line-height: 50px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<span id="top"></span>
+
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;">
+    <li><a href="#标题">标题</a></li>
+    <li><a href="#强调标签">强调标签</a></li>
+    <li><a href="#强调文本类">强调文本类</a></li>
+    <li><a href="#文本对齐类">文本对齐类</a></li>
+    <li><a href="#列表">列表</a></li>
+    <li><a href="#去点列表">去点列表</a></li>
+    <li><a href="#内联列表">内联列表</a></li>
+    <li><a href="#定义列表">定义列表</a></li>
+    <li><a href="#水平定义列表">水平定义列表</a></li>
+    <li><a href="#代码">代码</a></li>
+    <li><a href="#超长代码块出现滚动条">超长代码块出现滚动条</a></li>
+    <li><a href="#改变大小写类">改变大小写类</a></li>
+</ul>
+
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
+
+<!-- 标题 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="标题">标题</h3>
+    </div>
+    <div class="panel-body">
+        <h1>h1 一级标题</h1>
+        <h2>h2 二级标题</h2>
+        <h3>h3 三级标题</h3>
+        <h4>h4 四级标题</h4>
+        <h5>h5 五级标题</h5>
+        <h6>h6 六级标题</h6>
+
+        <h1>我是一级标题的 <small>small 标签内联子标题</small></h1>
+        <h1>我是一级标题的 <span class="small">.small 类内联子标题</span></h1>
+
+        <h2>二级标题</h2>
+        <p class="lead">我是标题下的 .lead 类引导主体副本，段落的强调副本</p>
+    </div>
+</div>
+
+<hr>
+
+<!-- 强调标签 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="强调标签">强调标签</h3>
+    </div>
+    <div class="panel-body">
+        <small>small 小号文本</small>
+        <br>
+        <strong>strong 强调文本</strong>
+        <br>
+        <b>b 粗体强调文本</b>
+        <br>
+
+        <em>em 斜体</em>
+        <br>
+        <i>i 斜体</i>
+        <br>
+
+        <mark>mark 文本高亮</mark>
+        <br>
+        <del>del 删除线</del>
+        <br>
+        <s>s 删除线</s>
+        <br>
+
+        <ins>ins 插入文本</ins>
+        <br>
+        <u>u 下划线</u>
+        <br>
+    </div>
+</div>
+
+<hr>
+
+<!-- 强调文本类 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="强调文本类">强调文本类</h3>
+    </div>
+    <div class="panel-body">
+        <p class="text-muted">.text-muted 提示，浅灰色</p>
+        <p class="text-primary">.text-primary 主要，蓝色</p>
+        <p class="text-success">.text-success 成功，浅绿色</p>
+        <p class="text-info">.text-info 信息，浅蓝色</p>
+        <p class="text-warning">.text-warning 警告，黄色</p>
+        <p class="text-danger">.text-danger 错误，褐色</p>
+    </div>
+</div>
+
+<hr>
+
+<!-- 文本对齐类 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="文本对齐类">文本对齐类</h3>
+    </div>
+    <div class="panel-body">
+        <p class="text-left">.text-left 文本左对齐</p>
+        <p class="text-center">.text-center 文本居中</p>
+        <p class="text-right">.text-right 文本右对齐</p>
+        <p class="text-justify">.text-justify 文本两端对齐</p>
+        <p class="text-nowrap">.text-nowrap </p>
+    </div>
+</div>
+
+<hr>
+
+<!-- 有序列表、无序列表、嵌套列表 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="列表">有序列表、无序列表、嵌套列表</h3>
+    </div>
+    <div class="panel-body">
+        <h3>有序列表 ol</h3>
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ol>
+
+        <h3>无序列表 ul</h3>
+        <ul>
+            <li>Man</li>
+            <li>Female</li>
+            <li>Unknown</li>
+            <li>Secret</li>
+        </ul>
+
+        <h3>有序嵌套列表 ol ul</h3>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>
+                PHP
+                <ul>
+                    <li>Laravel</li>
+                    <li>Yii</li>
+                    <li>ThinkPHP</li>
+                    <li>CI</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<hr>
+
+<!-- 去点列表 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="去点列表">去点列表 .list-unstyled</h3>
+    </div>
+    <div class="panel-body">
+        <ol>
+            <li>有序项目列表一</li>
+            <li>有序项目列表二</li>
+            <ol class="list-unstyled">
+                <li>有序二级项目列表一</li>
+                <li>有序二级项目列表二</li>
+                <ul>
+                    <li>无序三级项目列表一</li>
+                    <li>无序三级项目列表二</li>
+                    <ul class="list-unstyled">
+                        <li>无序四级项目列表一</li>
+                        <li>无序四级项目列表二</li>
+                    </ul>
+                    <li>无序三级项目列表三</li>
+                </ul>
+                <li>有序二级项目列表三</li>
+            </ol>
+            <li>有序项目列表三</li>
+        </ol>
+    </div>
+</div>
+
+<hr>
+
+<!-- 内联列表 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="内联列表">内联列表 .list-inline</h3>
+    </div>
+    <div class="panel-body">
+        <p>城市：</p>
+        <ul class="list-inline">
+            <li>北京</li>
+            <li>上海</li>
+            <li>南京</li>
+            <li>厦门</li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<!-- 定义列表 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="定义列表">定义列表 dl</h3>
+    </div>
+    <div class="panel-body">
+        <dl>
+            <dt>北京</dt>
+            <dd>北京市中国的首都，是政治文化集中地</dd>
+            <dt>上海</dt>
+            <dd>上海号称东方的巴黎</dd>
+        </dl>
+    </div>
+</div>
+
+<hr>
+
+<!-- 水平定义列表 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="水平定义列表">水平定义列表 .dl-horizontal</h3>
+    </div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>标题一：</dt>
+            <dd>描述内容</dd>
+            <dt>标题二：</dt>
+            <dd>描述内容</dd>
+        </dl>
+    </div>
+</div>
+
+<hr>
+
+<!-- 代码 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="代码">代码</h3>
+    </div>
+    <div class="panel-body">
+        <h3>code风格：单行内联代码</h3>
+        <div>Bootstrap的代码风格有三种：<code>&lt;code&gt;</code>、<code>&lt;pre&gt;</code>和<code>&lt;kbd&gt;</code></div>
+
+        <h3>pre风格：多行块代码</h3>
+        <div>
+        <pre>
+&lt;ul&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        </div>
+
+        <h3>kbd风格：用户输入代码</h3>
+        <div>请输入<kbd>ctrl+c</kbd>来复制代码，然后使用<kbd>ctrl+v</kbd>来粘贴代码</div>
+    </div>
+</div>
+
+<hr>
+
+<!-- 超长代码块出现滚动条 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="超长代码块出现滚动条">超长代码块出现滚动条 .pre-scrollable</h3>
+    </div>
+    <div class="panel-body">
+        高度超出340px，就会在Y轴出现滚动条
+        <pre class="pre-scrollable">
+        <ol>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+            <li>….</li>
+        </ol>
+    </div>
+</div>
+
+<hr>
+
+<!-- 改变大小写类 -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="改变大小写类">改变大小写类</h3>
+    </div>
+    <div class="panel-body">
+        <p>.text-lowercase：<span class="text-lowercase">MY NAME IS HANMEIMEI</span></p>
+        <p>.text-uppercase：<span class="text-uppercase">my name is hanmeimei</span></p>
+        <p>.text-capitalize：<span class="text-capitalize">my name is hanmeimei</span></p>
+    </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
