@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap 表格</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 100px;
+        }
+        .top {
+            display: block;
+            position: fixed;
+            right: 30px;
+            bottom: 30px; 
+            width: 50px; 
+            height: 50px; 
+            line-height: 50px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<span id="top"></span>
+
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;">
+    <li><a href="#表格行的类">表格行的类</a></li>
+    <li><a href="#基础表格">基础表格</a></li>
+    <li><a href="#斑马线表格">斑马线表格</a></li>
+    <li><a href="#带边框的表格">带边框的表格</a></li>
+    <li><a href="#鼠标悬浮高亮的表格">鼠标悬浮高亮的表格</a></li>
+    <li><a href="#紧凑型表格">紧凑型表格</a></li>
+    <li><a href="#响应式表格">响应式表格</a></li>
+</ul>
+
+<!-- 返回顶部按钮 -->
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="表格行的类">表格行的类</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>类名</th>
+              <th>描述</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="active">
+              <td>.active</td>
+              <td>表示当前活动的信息</td>
+            </tr>
+            <tr class="success">
+              <td>.success</td>
+              <td>表示成功或者正确的行为</td>
+            </tr>
+            <tr class="info">
+              <td>.info</td>
+              <td>表示中立的信息或行为</td>
+            </tr>
+            <tr class="warning">
+              <td>.warning</td>
+              <td>表示警告，需要特别注意</td>
+            </tr>
+            <tr class="danger">
+              <td>.danger</td>
+              <td>表示危险或者可能是错误的行为</td>
+            </tr>
+          </tbody>
+        </table> 
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="基础表格">基础表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+          <caption>基础表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="斑马线表格">斑马线表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+          <caption>斑马线表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="带边框的表格">带边框的表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered">
+          <caption>带边框的表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="鼠标悬浮高亮的表格">鼠标悬浮高亮的表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-hover">
+          <caption>鼠标悬浮高亮的表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="紧凑型表格">紧凑型表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+          <caption>紧凑型表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="响应式表格">响应式表格</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+          <caption>响应式表格</caption>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>城市</th>
+              <th>邮编</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tanmay</td>
+              <td>Bangalore</td>
+              <td>560001</td>
+            </tr>
+            <tr>
+              <td>Sachin</td>
+              <td>Mumbai</td>
+              <td>400003</td>
+            </tr>
+            <tr>
+              <td>Uma</td>
+              <td>Pune</td>
+              <td>411027</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
