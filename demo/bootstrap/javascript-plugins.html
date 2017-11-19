@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap JavaScript 插件</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 100px;
+        }
+        .top {
+            display: block;
+            position: fixed;
+            right: 30px;
+            bottom: 30px; 
+            width: 50px; 
+            height: 50px; 
+            line-height: 50px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<span id="top"></span>
+
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;">
+    <li><a href="#动画过渡（Transitions）">动画过渡（Transitions）</a></li>
+    <li><a href="#模块弹出框结构">模块弹出框结构</a></li>
+    <li><a href="#大小模态弹出框">大小模态弹出框</a></li>
+    <li><a href="#触发模态弹出窗 2 种方法">触发模态弹出窗 2 种方法</a></li>
+    <li><a href="#为弹出框增加过度动画效果">为弹出框增加过度动画效果</a></li>
+    <li><a href="#模态弹出窗的使用（data-参数说明）">模态弹出窗的使用（data-参数说明）</a></li>
+    <li><a href="#模态弹出窗的使用（JavaScript触发）">模态弹出窗的使用（JavaScript触发）</a></li>
+</ul>
+
+<!-- 返回顶部按钮 -->
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="动画过渡（Transitions）">动画过渡（Transitions）</h3>
+    </div>
+    <div class="panel-body">
+        <button class="btn btn-primary transitionsBtn" type="button">点击我</button>
+        <div class="modal fade" id="mymodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="模块弹出框结构">模块弹出框结构</h3>
+    </div>
+    <div class="panel-body">
+        <div class="modal hidden">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="大小模态弹出框">大小模态弹出框</h3>
+    </div>
+    <div class="panel-body">
+        <h3>大/小尺寸模态弹出框</h3>
+        <!-- Large modal -->
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+        大的模态弹出窗
+        </button>
+
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Small modal -->
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">
+        小的模态弹出窗
+        </button>
+
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="触发模态弹出窗 2 种方法">触发模态弹出窗 2 种方法</h3>
+    </div>
+    <div class="panel-body">
+        <!-- href触发模态弹出窗元素 -->
+        <a class="btn btn-primary" data-toggle="modal" href="#mymodal-link">通过链接href属性触发</a>
+        <!-- 模态弹出窗内容 -->
+        <div class="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mymodal-link">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- data-target触发模态弹出窗元素 -->
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mymodal-data">通过data-target触发</button>
+        <!-- 模态弹出窗内容 -->
+        <div class="modal" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="为弹出框增加过度动画效果">为弹出框增加过度动画效果</h3>
+    </div>
+    <div class="panel-body">
+        <!-- data-target触发模态弹出窗元素 -->
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#mymodalTransition">通过data-target触发</button>
+        <!-- 模态弹出窗内容 -->
+        <div class="modal fade" id="mymodalTransition" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="模态弹出窗的使用（data-参数说明）">模态弹出窗的使用（data-参数说明）</h3>
+    </div>
+    <div class="panel-body">
+        <!-- data-target触发模态弹出窗元素 -->
+        <button class="btn btn-primary" data-toggle="modal" data-target="#mymodalDataAttr" type="button">通过data-target触发</button>
+        <!-- 模态弹出窗内容 -->
+        <div class="modal fade" id="mymodalDataAttr" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="模态弹出窗的使用（JavaScript触发）">模态弹出窗的使用（JavaScript触发）</h3>
+    </div>
+    <div class="panel-body">
+        <button class="btn btn-primary modalJavascriptBtn" type="button">点击我</button>
+        <div class="modal" id="themodal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">模态弹出窗标题</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>模态弹出窗主体内容</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+</div>
+
+<hr>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  $(function(){
+    $(".transitionsBtn").click(function(){
+      $("#mymodal").modal("toggle");
+    });
+
+    $(".modalJavascriptBtn").click(function(){
+      $("#mymodal").modal("toggle");
+    });
+  });
+</script>
+</body>
+</html>
