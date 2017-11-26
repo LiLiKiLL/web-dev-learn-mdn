@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap 菜单</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    body {
+      padding: 150px 100px;
+    }
+
+    .dropdown{
+      float: left;
+    }
+    </style>
+</head>
+<body>
+<!-- 顶部锚点 -->
+<span id="top"></span>
+
+<!-- 导航 -->
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;" id="titleList"></ul>
+
+<!-- 返回顶部按钮 -->
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
+
+<!-- 示例 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="下拉分隔线">下拉分隔线</h3>
+    </div>
+    <div class="panel-body">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">食物<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelleby="dropdownMenu2">
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">香蕉</a></li>
+                <li><a href="#">梨</a></li>
+                <li><a href="#">桃</a></li>
+                <li class="divider"></li>
+                <li><a href="#">芹菜</a></li>
+                <li><a href="#">萝卜</a></li>
+                <li><a href="#">茄子</a></li>
+                <li class="divider"></li>
+                <li><a href="#">米饭</a></li>
+                <li><a href="#">馒头</a></li>
+                <li><a href="#">面条</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="菜单标题">菜单标题</h3>
+    </div>
+    <div class="panel-body">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">食物<span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelleby="dropdownMenu2">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">香蕉</a></li>
+                <li><a href="#">梨</a></li>
+                <li><a href="#">桃</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">蔬菜</li>
+                <li><a href="#">芹菜</a></li>
+                <li><a href="#">萝卜</a></li>
+                <li><a href="#">茄子</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">主食</li>
+                <li><a href="#">米饭</a></li>
+                <li><a href="#">馒头</a></li>
+                <li><a href="#">面条</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="对齐方式">对齐方式</h3>
+    </div>
+    <div class="panel-body">
+        <p>实现右对齐方法： 
+        Bootstrap 框架中下拉菜单默认是左对齐，如果你想让下拉菜单相对于父容器右对齐时，可以在 dropdown-menu上添加一个 pull-right 或者 dropdown-menu-right 类名。 
+        同时一定要为.dropdown添加 float:left css样式。</p>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">食物<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right" role="menu" aria-labelleby="dropdownMenu2">
+                <li class="dropdown-header">水果</li>
+                <li><a href="#">苹果</a></li>
+                <li><a href="#">香蕉</a></li>
+                <li><a href="#">梨</a></li>
+                <li><a href="#">桃</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">蔬菜</li>
+                <li><a href="#">芹菜</a></li>
+                <li><a href="#">萝卜</a></li>
+                <li><a href="#">茄子</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">主食</li>
+                <li><a href="#">米饭</a></li>
+                <li><a href="#">馒头</a></li>
+                <li><a href="#">面条</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="菜单项状态">菜单项状态</h3>
+    </div>
+    <div class="panel-body">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">选择你喜欢的水果<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right" role="menu" aria-labelleby="dropdownMenu2">
+                <li><a href="#">苹果</a></li>
+                <li class="active"><a href="#">香蕉</a></li>
+                <li><a href="#">梨</a></li>
+                <li class="disabled"><a href="#">桃</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
