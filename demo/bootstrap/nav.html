@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+<!-- 顶部锚点 -->
+<span id="top"></span>
+
+<!-- 导航 -->
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;" id="titleList"></ul>
+
+<!-- 返回顶部按钮 -->
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
+
+<!-- 示例 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="标签型TAB导航">标签型TAB导航</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">商品介绍</a></li>
+            <li><a href="#">规格参数</a></li>
+            <li><a href="#">商品评价</a></li>
+            <li><a href="#">售后保证</a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="胶囊形(pills)导航">胶囊形(pills)导航</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">商品介绍</a></li>
+            <li><a href="#">规格参数</a></li>
+            <li><a href="#">商品评价</a></li>
+            <li><a href="#">售后保证</a></a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="垂直堆叠的导航"> 垂直堆叠的导航</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked" style="width: 100px;text-align: center;">
+            <li class="active"><a href="#">商品介绍</a></li>
+            <li><a href="#">规格参数</a></li>
+            <li><a href="#">商品评价</a></li>
+            <li><a href="#">售后保证</a></a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="自适应导航（宽度 100%）">自适应导航（宽度 100%）</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="#">商品介绍</a></li>
+            <li><a href="#">规格参数</a></li>
+            <li><a href="#">商品评价</a></li>
+            <li><a href="#">售后保证</a></a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="导航加下拉菜单（二级导航）">导航加下拉菜单（二级导航）</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="##">首页</a></li>
+          <li class="dropdown">
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">教程<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="##">CSS3</a></li>
+                <li><a href="##">Sass</a></li>
+                <li class="divider"></li>
+                <li><a href="##">jQuery</a></li>
+                <li><a href="##">Responsive</a></li>
+              </ul>
+          </li>
+        <li><a href="##">关于我们</a></li>
+        </ul>
+    </div>
+</div>
+
+<hr>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="面包屑式导航">面包屑式导航</h3>
+    </div>
+    <div class="panel-body">
+        <ol class="breadcrumb">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">我的书</a></li>
+          <li class="active">《图解CSS3》</li>
+        </ol> 
+    </div>
+</div>
+
+<hr>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
