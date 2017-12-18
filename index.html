@@ -1,26 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald|Raleway" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  </head>
-  <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/Mozilla-Firefox-4-free-Logo1.jpg" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style type="text/css">
+        body {
+            padding: 100px;
+        }
+        .top {
+            display: block;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<!-- 顶部锚点 -->
+<span id="top"></span>
 
-    <p>At Mozilla, we’re a global community of</p>
-    
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
+<!-- 导航 -->
+<div class="container">
+    <ul class="nav nav-pills nav-justified">
+        <li class="active"><a href="#">MDN-HTML</a></li>
+        <li><a href="#">Bootstrap</a></li>
     </ul>
+</div>
 
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+<!-- 返回顶部按钮 -->
+<a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+<!-- 示例 -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center" id="##">##</h3>
+    </div>
+    <div class="panel-body">
+
+    </div>
+</div>
+
+<hr>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+</body>
 </html>

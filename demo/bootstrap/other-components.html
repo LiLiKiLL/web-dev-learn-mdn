@@ -6,40 +6,15 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Bootstrap 其他内置组件</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <style>
-        body {
-            padding: 100px;
-        }
-        .top {
-            display: block;
-            position: fixed;
-            right: 30px;
-            bottom: 30px; 
-            width: 50px; 
-            height: 50px; 
-            line-height: 50px;
-            background-color: #eee;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 <body>
 
+<!-- 顶部锚点 -->
 <span id="top"></span>
 
-<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;">
-    <li><a href="#简单的缩略图">简单的缩略图</a></li>
-    <li><a href="#复杂的缩略图">复杂的缩略图</a></li>
-    <li><a href="#默认警示框">默认警示框</a></li>
-    <li><a href="#可关闭的警示框">可关闭的警示框</a></li>
-    <li><a href="#警示框的链接">警示框的链接</a></li>
-    <li><a href="#进度条">进度条</a></li>
-    <li><a href="#默认媒体对象">默认媒体对象</a></li>
-    <li><a href="#媒体对象的嵌套">媒体对象的嵌套</a></li>
-    <li><a href="#媒体对象列表">媒体对象列表</a></li>
-    <li><a href="#列表组">列表组</a></li>
-    <li><a href="#面板">面板</a></li>
-    <li><a href="#面板中嵌套列表组">面板中嵌套列表组</a></li>
-</ul>
+<!-- 导航 -->
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;" id="titleList"></ul>
 
 <!-- 返回顶部按钮 -->
 <a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
@@ -93,7 +68,7 @@
                         <a href="##" class="btn btn-primary">开始学习</a>
                         <a href="##" class="btn btn-info">正在学习</a>
                     </p>
-                </div>  
+                </div>
             </div>
             <div class="col-xs-6 col-md-3">
                 <a href="#" class="thumbnail">
@@ -106,7 +81,7 @@
                         <a href="##" class="btn btn-primary">开始学习</a>
                         <a href="##" class="btn btn-info">正在学习</a>
                     </p>
-                </div>   
+                </div>
             </div>
             <div class="col-xs-6 col-md-3">
                 <a href="#" class="thumbnail">
@@ -119,7 +94,7 @@
                             <a href="##" class="btn btn-primary">开始学习</a>
                             <a href="##" class="btn btn-info">正在学习</a>
                         </p>
-                </div>   
+                </div>
             </div>
             <div class="col-xs-6 col-md-3">
                 <a href="#" class="thumbnail">
@@ -132,9 +107,9 @@
                         <a href="##" class="btn btn-primary">开始学习</a>
                         <a href="##" class="btn btn-info">正在学习</a>
                     </p>
-                </div>   
+                </div>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 
@@ -193,7 +168,7 @@
         <div class="alert alert-danger" role="alert">
             <strong>Oh snap!</strong><a href="#" class="alert-link">Change a few things up</a>
              and try submitting again.
-        </div> 
+        </div>
     </div>
 </div>
 
@@ -208,20 +183,20 @@
         <div class="progress">
              <div class="progress-bar" style="width:40%">
             </div>
-        </div> 
+        </div>
         <h2>彩色进度条</h2>
         <div class="progress">
             <div class="progress-bar progress-bar-success" style="width:40%"></div>
-        </div> 
+        </div>
         <div class="progress">
              <div class="progress-bar progress-bar-info" style="width:60%"></div>
-        </div> 
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-warning" style="width:80%"></div>
-        </div> 
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-danger" style="width:50%"></div>
-        </div> 
+        </div>
         <h2>条纹进度条</h2>
         <div class="progress progress-striped">
             <div class="progress-bar progress-bar-success" style="width:40%"></div>
@@ -238,13 +213,13 @@
         <h2>动态条纹进度条</h2>
         <div class="progress progress-striped active">
             <div class="progress-bar progress-bar-success" style="width:40%"></div>
-        </div> 
+        </div>
         <div class="progress progress-striped active">
             <div class="progress-bar progress-bar-info" style="width:60%"></div>
-        </div> 
+        </div>
         <div class="progress progress-striped active">
             <div class="progress-bar progress-bar-warning" style="width:80%"></div>
-        </div> 
+        </div>
         <div class="progress progress-striped active">
             <div class="progress-bar progress-bar-danger" style="width:50%"></div>
         </div>
@@ -255,27 +230,27 @@
             <div class="progress-bar progress-bar-info" style="width:10%"></div>
             <div class="progress-bar progress-bar-warning" style="width:30%"></div>
             <div class="progress-bar progress-bar-danger" style="width:15%"></div>
-        </div> 
-        <h5>不良效果层叠进度条</h5> 
+        </div>
+        <h5>不良效果层叠进度条</h5>
         <div class="progress">
             <div class="progress-bar progress-bar-success" style="width:20%"></div>
             <div class="progress-bar progress-bar-info" style="width:40%"></div>
             <div class="progress-bar progress-bar-warning" style="width:30%"></div>
             <div class="progress-bar progress-bar-danger" style="width:45%"></div>
-        </div> 
+        </div>
         <h5>层叠条纹进度条</h5>
         <div class="progress">
             <div class="progress-bar progress-bar-success" style="width:20%"></div>
             <div class="progress-bar progress-bar-info" style="width:20%"></div>
             <div class="progress-bar progress-bar-warning" style="width:30%"></div>
             <div class="progress-bar progress-bar-danger" style="width:15%"></div>
-        </div>  
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-success progress-bar-striped" style="width:20%"></div>
             <div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
             <div class="progress-bar progress-bar-striped progress-bar-warning" style="width:30%"></div>
             <div class="progress-bar progress-bar-danger progress-bar-striped" style="width:15%"></div>
-        </div> 
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-success" style="width:20%"></div>
             <div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
@@ -285,8 +260,8 @@
         <h2>带Label的进度条</h2>
         <h5>进度条1</h5>
         <div class="progress">
-            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>  
-        </div>  
+            <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"   style="width:70%">70%</div>
         </div>
@@ -297,7 +272,7 @@
             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%">15%</div>
         </div>
 
-        <h5>进度条2</h5> 
+        <h5>进度条2</h5>
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
@@ -607,5 +582,6 @@
 
 <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

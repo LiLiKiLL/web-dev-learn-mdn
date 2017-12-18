@@ -6,35 +6,15 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Bootstrap 表格</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <style>
-        body {
-            padding: 100px;
-        }
-        .top {
-            display: block;
-            position: fixed;
-            right: 30px;
-            bottom: 30px; 
-            width: 50px; 
-            height: 50px; 
-            line-height: 50px;
-            background-color: #eee;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 <body>
 
+<!-- 顶部锚点 -->
 <span id="top"></span>
 
-<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;">
-    <li><a href="#表格行的类">表格行的类</a></li>
-    <li><a href="#基础表格">基础表格</a></li>
-    <li><a href="#斑马线表格">斑马线表格</a></li>
-    <li><a href="#带边框的表格">带边框的表格</a></li>
-    <li><a href="#鼠标悬浮高亮的表格">鼠标悬浮高亮的表格</a></li>
-    <li><a href="#紧凑型表格">紧凑型表格</a></li>
-    <li><a href="#响应式表格">响应式表格</a></li>
-</ul>
+<!-- 导航 -->
+<ul class="nav nav-pills nav-stacked" style="text-align: center; margin-bottom: 30px;" id="titleList"></ul>
 
 <!-- 返回顶部按钮 -->
 <a href="#top" class="top text-center"><span class="glyphicon glyphicon-arrow-up"></span></a>
@@ -73,7 +53,7 @@
               <td>表示危险或者可能是错误的行为</td>
             </tr>
           </tbody>
-        </table> 
+        </table>
     </div>
 </div>
 
@@ -301,5 +281,6 @@
 
 <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
