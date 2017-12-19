@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap plugins 选项卡</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>基本选项卡</h1>
+<!-- 选项卡组件（菜单项nav-tabs）-->
+<ul id="myTab" class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#bulletin" role="tab" data-toggle="tab">公告</a></li>
+    <li><a href="#rule" role="tab" data-toggle="tab">规则</a></li>
+    <li><a href="#forum" role="tab" data-toggle="tab">论坛</a></li>
+    <li><a href="#security" role="tab" data-toggle="tab">安全</a></li>
+    <li><a href="#welfare" role="tab" data-toggle="tab">公益</a></li>
+</ul>
+<!-- 选项卡面板 -->
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane active" id="bulletin">公告内容面板</div>
+    <div class="tab-pane" id="rule" data-toggle="tab">规则内容面板</div>
+    <div class="tab-pane" id="forum" data-toggle="tab">论坛内容面板</div>
+    <div class="tab-pane" id="security" data-toggle="tab">安全内容面板</div>
+    <div class="tab-pane" id="welfare" data-toggle="tab">公益内容面板</div>
+</div>
+
+<br />
+<br />
+
+<h1>fade样式选项卡</h1>
+<!-- 选项卡组件（菜单项nav-tabs）-->
+<ul id="myTab2" class="nav nav-tabs" role="tablist">
+    <li><a href="#fun" role="tab" data-toggle="tab">娱乐</a></li>
+    <li><a href="#house" role="tab" data-toggle="tab">房产</a></li>
+    <li><a href="#internal" role="tab" data-toggle="tab">国内</a></li>
+    <li><a href="#external" role="tab" data-toggle="tab">国外</a></li>    
+</ul>
+<!-- 选项卡面板 -->
+<div id="myTabContent2" class="tab-content">
+    <div class="tab-pane fade in active" id="fun">娱乐内容面板</div>
+    <div class="tab-pane fade" id="house">房产内容面板</div>
+    <div class="tab-pane fade" id="internal">国内内容面板</div>
+    <div class="tab-pane fade" id="external">国外内容面板</div>   
+</div>
+
+<br>
+<br>
+
+<h1>胶囊式选项卡</h1>
+<!-- 选项卡组件（菜单项nav-tabs）-->
+<ul id="myTab3" class="nav nav-pills" role="tablist">
+    <li><a href="#1" role="tab" data-toggle="pill">娱乐</a></li>
+    <li><a href="#2" role="tab" data-toggle="pill">房产</a></li>
+    <li><a href="#3" role="tab" data-toggle="pill">国内</a></li>
+    <li><a href="#4" role="tab" data-toggle="pill">国外</a></li>  
+</ul>
+<!-- 选项卡面板 -->
+<div id="myTabContent3" class="tab-content">
+    <div class="tab-pane fade in active" id="1">娱乐内容面板</div>
+    <div class="tab-pane fade" id="2">房产内容面板</div>
+    <div class="tab-pane fade" id="3">国内内容面板</div>
+    <div class="tab-pane fade" id="4">国外内容面板</div>  
+</div>
+
+<h1>JavaScript触发</h1>
+<!-- 选项卡组件（菜单项nav-tabs）-->
+<ul id="myTab4" class="nav nav-tabs" role="tablist">
+    <li><a href="#a" role="tab">娱乐</a></li>
+    <li><a href="#b" role="tab">房产</a></li>
+    <li><a href="#c" role="tab">国内</a></li>
+    <li><a href="#d" role="tab">国外</a></li>    
+</ul>
+<!-- 选项卡面板 -->
+<div id="myTabContent4" class="tab-content">
+    <div class="tab-pane fade in active" id="a">娱乐内容面板</div>
+    <div class="tab-pane fade" id="b">房产内容面板</div>
+    <div class="tab-pane fade" id="c">国内内容面板</div>
+    <div class="tab-pane fade" id="d">国外内容面板</div>  
+</div>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function() {
+        $("#myTab4 a").click(function(e) {
+            e.preventDefault();
+            $(this).tab("show");
+        });
+    })
+</script>
+</body>
+</html>
