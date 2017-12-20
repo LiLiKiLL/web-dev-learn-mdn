@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap plugins demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+
+<h4>普通按钮关闭样式</h4>
+<div class="alert " role="alert">
+    <button class="close" type="button" data-dismiss="alert" >&times;</button>
+    恭喜您操作成功！
+</div>
+
+<hr>
+
+<h4>链接关闭样式</h4>
+<div class="alert alert-warning" role="alert">
+    <h4>谨防被骗</h4>
+    <p>请确认您转账的信息是你的亲朋好友，不要轻意相信不认识的人...</p>
+    <a href="#" class="btn btn-danger" data-dismiss="alert">关闭</a>
+</div>
+
+<hr>
+
+<h4>JavaScript触发</h4>
+
+<div class="alert alert-warning" role="alert" id="myAlert">
+    <h4>谨防被骗</h4>
+    <p>请确认您转账的信息是你的亲朋好友，不要轻意相信不认识的人...</p>
+    <button type="button"  class="btn btn-danger" id="close">关闭</button>
+</div>
+
+<script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function(){
+        $("#close").on("click",function(){
+            $(this).alert("close");
+        });
+    });
+</script>
+</body>
+</html>
