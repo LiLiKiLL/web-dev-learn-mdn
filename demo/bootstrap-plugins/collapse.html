@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap plugins collapse</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+
+<h4>手风琴结构</h4>
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">标题一</a></h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">标题一对应的内容</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">标题二</a></h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">标题二对应的内容</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">标题三</a></h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">标题三对应的内容</div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<h4>声明式触发手风琴</h4>
+
+<div class="panel-group" id="myCollapse">
+    <div class="panel panel-default panel-accordion">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a href="#panel1" data-toggle="collapse" data-target="#panel1" data-parent="#myCollapse">手风琴标题一</a></h4>
+        </div>
+        <div class="panel-collapse collapse in"  id="panel1">
+            <div class="panel-body">手风琴内容一</div>
+        </div>
+    </div>
+    <div class="panel panel-default panel-accordion">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a href="#panel2" data-toggle="collapse" data-target="#panel2" data-parent="#myCollapse">手风琴标题二</a></h4>
+        </div>
+        <div class="panel-collapse collapse" id="panel2">
+            <div class="panel-body">手风琴内容二</div>
+        </div>
+    </div>
+    <div class="panel panel-default panel-accordion">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a href="#panel3" data-toggle="collapse" data-target="#panel3" data-parent="#myCollapse">手风琴标题三</a></h4>
+        </div>
+        <div class="panel-collapse collapse" id="panel3">
+            <div class="panel-body">手风琴内容三</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

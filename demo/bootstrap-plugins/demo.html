@@ -10,67 +10,8 @@
 </head>
 <body>
 
-<h4>按钮加载状态</h4>
-<button class="btnbtn-primary" data-loading-text="正在加载中,请稍等..." type="button" id="loaddingBtn">加载</button>
-
-<hr>
-
-<h4>模拟单选按钮</h4>
-
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="options1">男
-    </label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="options2">女
-    </label>
-    <label class="btn btn-primary">
-        <input type="radio" name="options" id="options3">未知
-    </label>
-</div>
-
-<hr>
-
-<h4>模拟复选按钮</h4>
-
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-default">
-        <input type="checkbox" name="options" id="options4">电影
-    </label>
-    <label class="btn btn-default">
-        <input type="checkbox" name="options" id="options5">音乐
-    </label>
-    <label class="btn btn-default">
-        <input type="checkbox" name="options" id="options6">游戏
-    </label>
-    <label class="btn btn-default">
-        <input type="checkbox" name="options" id="options7">摄影
-    </label>
-</div>
-
-<hr>
-
-<h4>JavaScript用法</h4>
-
-<div class="btn-group" data-toggle="buttons">
-    <button type="button" data-toggle="button" class="btn btn-primary" id="mybutton" data-complete-text="Loading finished" data-loading-text="Loading...">确认</button>
-</div>
 
 <script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
-    $(function() {
-        $('#loaddingBtn').bind('click', function() {
-            $(this).button('loading');
-        });
-
-        $('#mybutton').bind('click', function () {
-            $(this).button('loading').delay(1000).queue(function () {
-                $(this).button('reset');
-                $(this).button('complete');
-            });
-        });
-    });
-</script>
 </body>
 </html>
