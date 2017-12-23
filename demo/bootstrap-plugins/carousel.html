@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Bootstrap plugins demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+
+<h4>声明式触发</h4>
+<div class="carousel slide" id="imageslide" data-ride="carousel" data-wrap="false" data-interval="2000">
+    <!-- 设置轮播图片顺序 -->
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#imageslide" data-slide-to="0">1</li>
+        <li data-target="#imageslide" data-slide-to="1">2</li>
+        <li data-target="#imageslide" data-slide-to="2">3</li>
+    </ol>
+    <!-- 设置轮播图片 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题1</h3>、
+                <p>内容1</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题2</h3>、
+                <p>内容2</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题3</h3>、
+                <p>内容3</p>
+            </div>
+        </div>
+    </div>
+    <!-- 设置轮播图片控制器 -->
+    <a class="carousel-control left" href="#imageslide" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#imageslide" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+</div>
+
+
+<h4>JavaScript触发</h4>
+<div class="carousel slide" id="jsimageslide">
+    <!-- 设置轮播图片顺序 -->
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#imageslide" data-slide-to="0"></li>
+        <li data-target="#imageslide" data-slide-to="1"></li>
+        <li data-target="#imageslide" data-slide-to="2"></li>
+    </ol>
+    <!-- 设置轮播图片 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题1</h3>、
+                <p>内容1</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题2</h3>、
+                <p>内容2</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="##"><img src="http://via.placeholder.com/1720x150" alt=""></a>
+            <!-- 设置标题和内容 -->
+            <div class="carousel-caption">
+                <h3>标题3</h3>、
+                <p>内容3</p>
+            </div>
+        </div>
+    </div>
+    <!-- 设置轮播图片控制器 -->
+    <a class="carousel-control left" href="#imageslide" role="button">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#imageslide" role="button">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+</div>
+
+<script src="https://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){
+        $("#jsimageslide").carousel({
+            interval: 2000
+        });
+        $("#jsimageslide a.left").click(function() {
+            $("#jsimageslide").carousel("prev");
+        });
+        $("#jsimageslide a.right").click(function() {
+            $("#jsimageslide").carousel("next");
+        })
+    });
+</script>
+</body>
+</html>
