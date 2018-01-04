@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Mozilla is cool</h1>
-    <img src="firefox-logo1.jpg" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+    <img src="./images/firefox-logo1.jpg" alt="The Firefox logo: a flaming fox surrounding the Earth.">
 
     <p>At Mozilla, we’re a global community of</p>
     
@@ -23,10 +23,10 @@
       var myImg = document.querySelector('img');
       myImg.onclick = function() {
         var myImgSrc = myImg.getAttribute('src');
-        if (myImgSrc === 'firefox-logo1.jpg') {
-          myImg.setAttribute('src', 'media/Firefox-heart-drawing.svg');
+        if (myImgSrc === './images/firefox-logo1.jpg') {
+          myImg.setAttribute('src', './media/Firefox-heart-drawing.svg');
         } else {
-          myImg.setAttribute('src', 'images/firefox-logo1.jpg');
+          myImg.setAttribute('src', './images/firefox-logo1.jpg');
         }
       }
     </script>
