@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>层叠和继承 | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    body {
+      color: green;
+    }
+
+    .inherit a {
+      color: inherit;
+    }
+
+    .initial a {
+      color: initial
+    }
+
+    .unset a {
+      color: unset;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+      <li>Default <a href="#">link</a> color</li>
+      <li class="inherit">Inherit the <a href="#">link</a> color</li>
+      <li class="initial">Reset the <a href="#">link</a> color</li>
+      <li class="unset">Unset the <a href="#">link</a> color</li>
+    </ul>
+</body>
+</html>

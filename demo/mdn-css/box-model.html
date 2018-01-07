@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>盒模型 | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    /* General styles */
+    body {
+      margin: 0;
+    }
+
+    #wrapper * {
+      padding: 20px;
+      font-size: 20px;
+      border: 20px solid rgba(0,0,0,0.5);
+    }
+
+    .divider {
+        height: 100px;
+    }
+
+    /* specific boxes */
+
+    #wrapper header, #wrapper footer {
+      background-color: blue;
+      color: white;
+    }
+
+    #wrapper main {
+      background-color: yellow;
+      margin-bottom: 20px;
+      /*margin: 30px;*/
+      /*padding: 30px;*/
+      /*margin: 5%;*/
+      margin-top: -50px;
+      padding: 5%;
+      border: 60px dashed red;
+      /*width: 400px;*/
+      width: 60%;
+      height: 200px;
+    }
+
+    #wrapper header {
+
+    }
+
+    #wrapper footer {
+        margin-top: 15px;
+    }
+
+    /*overflow*/
+    #overflow_wrapper p {
+      width  : 400px;
+      height : 2.5em;
+      padding: 1em 1em 1em 1em;
+      border : 1px solid black;
+    }
+
+    .autoscroll { overflow: auto;    }
+    .clipped    { overflow: hidden;  }
+    .default    { overflow: visible; }
+
+    /*background-clip*/
+    #bgclip_wrapper div {
+      width  : 60px;
+      height : 60px;
+      border : 20px solid rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin : 20px 0;
+
+      background-size    : 140px;
+      background-position: center;
+      background-image   : url('https://mdn.mozillademos.org/files/11947/ff-logo.png');
+      background-color   : gold;
+    }
+
+    .default     { background-clip: border-box;  }
+    .padding-box { background-clip: padding-box; }
+    .content-box { background-clip: content-box; }
+
+    /*display*/
+    #display_wrapper p {
+      padding : 1em;
+      border  : 1px solid black;
+    }
+
+    #display_wrapper span {
+      padding : 0.5em;
+      border  : 1px solid green;
+
+      /* That makes the box visible, regardless of its type */
+      background-color: yellow;
+    }
+
+    .inline       { display: inline;       }
+    .block        { display: block;        }
+    .inline-block { display: inline-block; }
+    </style>
+</head>
+<body>
+    <!-- border/margin/padding -->
+    <h2>border/margin/padding</h2>
+    <div id="wrapper">
+      <header>Header</header>
+      <main>Main content</main>
+      <footer>Footer</footer>
+    </div>
+
+    <!-- overflow -->
+    <h2>overflow</h2>
+    <div id="overflow_wrapper">
+        <p class="autoscroll">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Mauris tempus turpis id ante mollis dignissim. Nam sed
+           dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+           iaculis tincidunt augue. Integer efficitur sem eget risus
+           cursus, ornare venenatis augue hendrerit. Praesent non elit
+           metus. Morbi vel sodales ligula.
+        </p>
+
+        <p class="clipped">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Mauris tempus turpis id ante mollis dignissim. Nam sed
+           dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+           iaculis tincidunt augue. Integer efficitur sem eget risus
+           cursus, ornare venenatis augue hendrerit. Praesent non elit
+           metus. Morbi vel sodales ligula.
+        </p>
+
+        <p class="default">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Mauris tempus turpis id ante mollis dignissim. Nam sed
+           dolor non tortor lacinia lobortis id dapibus nunc. Praesent
+           iaculis tincidunt augue. Integer efficitur sem eget risus
+           cursus, ornare venenatis augue hendrerit. Praesent non elit
+           metus. Morbi vel sodales ligula.
+        </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- background-clip -->
+    <h2>background-clip</h2>
+    <div id="bgclip_wrapper">
+        <div class="default"></div>
+        <div class="padding-box"></div>
+        <div class="content-box"></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- display -->
+    <h2>display</h2>
+    <div id="display_wrapper">
+        <p>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           <span class="inline">Mauris tempus turpis id ante mollis dignissim.</span>
+           Nam sed dolor non tortor lacinia lobortis id dapibus nunc.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <span class="block">Mauris tempus turpis id ante mollis dignissim.</span>
+          Nam sed dolor non tortor lacinia lobortis id dapibus nunc.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <span class="inline-block">Mauris tempus turpis id ante mollis dignissim.</span>
+          Nam sed dolor non tortor lacinia lobortis id dapibus nunc.
+        </p>
+    </div>
+</body>
+</html>
