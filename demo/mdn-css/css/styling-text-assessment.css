@@ -1,0 +1,144 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Helvetica;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  font-size: 1.3rem;
+}
+
+header {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 3.6rem;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+section h2 + p {
+  text-indent: 2rem;
+}
+
+a:link,
+a:visited,
+a:focus,
+a:hover {
+  color: #a66;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active {
+  background-color: #a66;
+  color: #fff;
+}
+
+a[href^=http] {
+  background: url(../images/external-link-52.png) no-repeat 100% 0;
+  background-size: 1.5rem 1.5rem;
+  padding-right: 1.9rem;
+}
+
+li {
+  line-height: 2rem;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}
+
+nav ul {
+  padding: 0px;
+  width: 100%;
+  list-style-type: none;
+}
+
+nav li {
+  margin-bottom: 2rem;
+}
+
+nav li a {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 2rem 3rem;
+  text-align: center;
+  border: 1px solid #a66;
+}
+
+nav li a:hover {
+  background-color: #a66;
+  color: #fff;
+}
