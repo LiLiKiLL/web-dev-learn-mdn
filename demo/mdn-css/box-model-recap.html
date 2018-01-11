@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>盒模型概要 | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    html {
+      font-family: sans-serif;
+      background: #ccc;
+    }
+
+    .one, .two {
+      background: red;
+      width: 300px;
+      height: 150px;
+      padding: 20px;
+      border: 10px solid black;
+      margin: 20px auto;
+    }
+
+    .two {
+      box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <h2>Box-sizing:border-box</h2>
+    <p>盒模型的width和height默认指的是内容，通过设置box-sizing属性来改变盒模型</p>
+    <div class="one"></div>
+    <div class="two"></div>
+
+    <script>
+        var one = document.querySelector('.one');
+        var two = document.querySelector('.two');
+
+        function outputWH(box) {
+          var width = box.offsetWidth;
+          var height = box.offsetHeight;
+          box.textContent = 'Width: ' + width + 'px, Height: ' + height + 'px.'
+        }
+
+        outputWH(one);
+        outputWH(two);
+    </script>
+</body>
+</html>
