@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>过滤器 | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    p {
+      margin: 1rem auto;
+      padding: 20px;
+      width: 100px;
+      border: 5px dashed red;
+    }
+
+    .filter {
+      -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+      filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+    }
+
+    .box-shadow {
+      box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    }
+    </style>
+</head>
+<body>
+    <p class="filter">Filter</p>
+
+    <p class="box-shadow">Box shadow</p>
+</body>
+</html>
