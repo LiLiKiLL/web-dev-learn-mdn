@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Border | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    .rounded {
+      width: 220px;
+      padding: 20px;
+      margin: 10px;
+      line-height: 2;
+      background-color: yellow;
+      text-align: center;
+      border-style: dashed;
+    }
+    .br1 {
+        border-radius: 20px;
+    }
+    .br2 {
+        border-radius: 50px / 100px;
+    }
+    .br3 {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 50px 100px;
+        border-bottom-left-radius: 50px 80px;
+        border-bottom-right-radius: 100px;
+    }
+    .br4 {
+        border-bottom-left-radius: 50px;
+    }
+    .br5 {
+        border-radius: 50%;
+    }
+    .br6 {
+        border-radius: 50px 100px;
+    }
+    </style>
+</head>
+<body>
+    <div class="rounded br1">
+      <p>每一个角落都有同样的圆角。</p>
+    </div>
+    <div class="rounded br2">
+      <p>每个角落都有同样的椭圆角。</p>
+    </div>
+    <div class="rounded br3">
+      <p>每个角落都有一个不同的圆角和椭圆角。</p>
+    </div>
+    <div class="rounded br4">
+      <p>在左下角的一个圆角</p>
+    </div>
+    <div class="rounded br5">
+      <p>使用百分比单位值的圆角，百分比很有意思</p>
+    </div>
+    <div class="rounded br6">
+      <p>对角线圆角相同</p>
+    </div>
+    
+</body>
+</html>
