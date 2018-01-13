@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>混合模式 | MDN-CSS</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <style>
+    #demo_1 div {
+      width: 280px;
+      height: 130px;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+      background-color: green;
+    }
+
+    #demo_1 .multiply {
+      background-blend-mode: multiply;
+    }
+
+    #demo_2 article {
+      width: 300px;
+      height: 180px;
+      margin: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    #demo_2 div {
+      width: 250px;
+      height: 130px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    #demo_2 article div:first-child {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+      background-color: green;
+    }
+
+    #demo_2 article div:last-child {
+      background-color: purple;
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      z-index: -1;
+    }
+
+    #demo_2 .multiply-mix {
+      mix-blend-mode: multiply;
+    }
+
+    .style-me {
+      width: 280px;
+      height: 300px;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      background-color: red;
+      background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px,
+                  linear-gradient(to bottom right, #f33, #fff);
+      box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.5),
+            10px 10px 5px rgba(0, 255, 0, 0.5),
+            15px 15px 5px rgba(0, 0, 255, 0.5);
+            /*inset 5px 5px 5px rgba(255, 0, 255),*/
+            /*inset -5px -5px 5px rgba(255, 255, 0);*/
+      filter:drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.7));
+      -webkit-filter:drop-shadow(5px, 5px, 5px, rgba(0, 0, 0, 0.7));
+      background-blend-mode: multiply;
+
+      text-align: center;
+      font-size: 5em;
+      vertical-align: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    } 
+    </style>
+</head>
+<body>
+    <div id="demo_1">
+        <h2>background-blend-mode</h2>
+        <div>
+        </div>
+        <div class="multiply">
+        </div>
+    </div>
+
+    <div id="demo_2">
+        <h2>mix-blend-mode</h2>
+        <article>
+          No mix blend mode
+          <div>
+                
+          </div>
+          <div>
+          </div>
+        </article>
+
+        <article>
+          Multiply mix
+          <div class="multiply-mix">
+                
+          </div>
+          <div>
+          </div>
+        </article>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="demo_3">
+        <h2>练习</h2>
+        <div class="style-me">
+            WOW
+        </div>
+    </div>
+</body>
+</html>
