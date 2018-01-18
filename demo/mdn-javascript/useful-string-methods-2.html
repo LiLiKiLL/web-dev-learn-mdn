@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>有用的字符串方法：城市名称 | MDN-JavaScript</title>
+</head>
+<body>
+
+<div class="output">
+    <ul>
+    </ul>
+</div>
+<script>
+    // 我们有英国城市的名字，但是这个大写字母都搞砸了。 我们希望你改变它们，使它们都是小写字母，除了首字母。
+    var list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+    for(var i = 0; i < cities.length; i++) {
+      var input = cities[i];
+      var lower = input.toLowerCase();
+      var firstLetter = input[0];
+      var upperFirstLetter = firstLetter.toUpperCase();
+      final = upperFirstLetter + lower.slice(1);
+      var result = final;
+      var listItem = document.createElement('li');
+      listItem.textContent = result;
+      list.appendChild(listItem);
+    }
+</script>
+</body>
+</html>
