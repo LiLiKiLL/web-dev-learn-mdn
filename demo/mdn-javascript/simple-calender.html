@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>简单的日历 | MDN-JavaScript</title>
+    <style>
+    ul {
+        list-style-type: none;
+    }
+    ul li {
+        display: inline-block;
+        line-height: 30px;
+        width: 100px;
+        height: 30px;
+        padding: 5px;
+        background-color: #4A2DB6;
+        margin: 10px;
+        text-align: center;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <span>Select month:</span>
+            <select id="month">
+                <option value="January" selected>January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <h1>January</h1>
+        <ul>
+        </ul>
+    </div>
+    <script>
+        var select = document.querySelector('select');
+        var list = document.querySelector('ul');
+        var h1 = document.querySelector('h1');
+
+        var bigMonths = [
+            'January',
+            'March',
+            'May',
+            'July',
+            'August',
+            'October',
+            'December'
+        ];
+
+        var smallMonths = [
+            'April',
+            'June',
+            'September',
+            'November'
+        ];
+
+        var tinyMonths = [
+            'February'
+        ]
+
+        select.onchange = function() {
+          var choice = select.value;
+
+          // ADD CONDITIONAL HERE
+          if (-1 != bigMonths.indexOf(choice)) {
+            days = 31;
+          } else if (-1 != smallMonths.indexOf(choice)) {
+            days = 30;
+          } else if (-1 != tinyMonths.indexOf(choice)) {
+            days = 28;
+          } else {
+            days = 31;
+          }
+
+          createCalendar(days, choice);
+        }
+
+        function createCalendar(days, choice) {
+          list.innerHTML = '';
+          h1.textContent = choice;
+          for (var i = 1; i <= days; i++) {
+            var listItem = document.createElement('li');
+            listItem.textContent = i;
+            list.appendChild(listItem);
+          }
+        }
+
+        createCalendar(31,'January');
+    </script>
+</body>
+</html>
