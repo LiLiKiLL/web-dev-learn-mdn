@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>数组练习：打印产品MDN-JavaScript demo</title>
+</head>
+<body>
+    <div class="output">
+        <ul>
+        </ul>
+        <p></p>
+    </div>
+    <script>
+        var list = document.querySelector('.output ul');
+        var totalBox = document.querySelector('.output p');
+        var total = 0;
+        list.innerHTML = '';
+        totalBox.textContent = '';
+        var products = [
+            'Underpants:6.99',
+            'Socks:5.99',
+            'T-shirt:14.99',
+            'Trousers:31.99',
+            'Shoes:23.99'
+        ];
+
+        for (var i = 0; i < products.length; i++) { // number 2
+          var product = products[i];
+          var subArray = product.split(':');
+          var productName = subArray[0];
+          var productPrice = subArray[1];
+          productPrice = Number(productPrice);
+          total += productPrice;
+          itemText = productName + ' - ' + '$ ' + productPrice;
+          
+          var listItem = document.createElement('li');
+          listItem.textContent = itemText;
+          list.appendChild(listItem);
+        }
+
+        totalBox.textContent = 'Total: $' + total.toFixed(2);
+    </script>
+</body>
+</html>
