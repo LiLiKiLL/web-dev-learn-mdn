@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>循环：来宾列表 | MDN-JavaScript</title>
+</head>
+<body>
+<p class="admitted"></p> 
+<p class="refused"></p>
+<script>
+    var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+        
+    var admitted = document.querySelector('.admitted');
+    var refused = document.querySelector('.refused');
+    admitted.textContent = 'Admit: ';
+    refused.textContent = 'Refuse: '
+
+    var i = 0;
+    while (i < people.length) {
+        if ('Phil' === people[i] || 'Lola' === people[i]) {
+            refused.textContent += people[i] + ',';
+        } else {
+            admitted.textContent += people[i] + ',';
+        }
+        i++;
+    }
+
+    refused.textContent = refused.textContent.slice(0, refused.textContent.length - 2) + '.';
+    admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length - 2) + '.';
+</script>
+</body>
+</html>

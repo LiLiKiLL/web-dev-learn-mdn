@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>循环：模拟倒计时 | MDN-JavaScript</title>
+</head>
+<body>
+<div class="output"></div>
+<script>
+    var output = document.querySelector('.output');
+    output.innerHTML = '';
+
+    var i = 10;
+    while(i >= 0) {
+        var para = document.createElement('p');  
+        if (10 === i) {
+            para.textContent = 'Countdown' + i;
+        } else if (0 === i) {
+            para.textContent = 'Blast off!'
+        } else {
+            para.textContent = i;
+        }
+        output.appendChild(para);
+        i--;
+    }
+</script>
+</body>
+</html>
