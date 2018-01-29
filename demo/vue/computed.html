@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>vue 测试</title>
+</head>
+<body>
+
+<!-- computed 计算属性 -->
+<div id="app-15">
+    <p>原始字符串：{{ message }}</p>
+    <p>翻转字符串：{{ reversedMessage }}</p>
+</div>
+
+<!-- 计算属性缓存 vs 方法 -->
+<div id="app-16">
+    <p>原始字符串：{{ message }}</p>
+    <p>翻转字符串：{{ reversedMessage() }}</p>
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+
+    var app15 = new Vue({
+        el: '#app-15',
+        data: {
+            message: 'hello world'
+        },
+        computed: {
+            // 计算属性的 getter
+            reversedMessage: function () {
+                // `this` 指向 vm 实例
+                return this.message.split('').reverse().join('');
+            }
+        }
+    });
+    // console: app15.message = 'success'
+    // console.log(vm.reversedMessage) // => 'olleH'
+    // vm.message = 'Goodbye'
+    // console.log(vm.reversedMessage) // => 'eybdooG'
+
+    var app16 = new Vue({
+        el: '#app-16',
+        data: {
+            message: 'hello'
+        },
+        methods: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('');
+            }
+        }
+    });
+</script>
+</body>
+</html>
