@@ -1,0 +1,19 @@
+{
+  "name": "lesson2",
+  "version": "1.0.0",
+  "description": "《学习使用外部模块》",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "learn"
+  ],
+  "author": "Chen Xu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "utility": "^1.13.1"
+  }
+}
